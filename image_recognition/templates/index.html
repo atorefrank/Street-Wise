@@ -20,16 +20,21 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <form class="form-horizontal" action="" method="post">
-          <legend>Image Interpreter</legend>
+        <form class="form-horizontal" action="{% url 'index' %}" method="post">
+          <legend>Image identification</legend>
           <div class="form-group">
             {% csrf_token %}
-            <label for="text-area">Upload an image</label>
-            <textarea class="form-control" col="40" rows="10" name="text-area"></textarea>
+            <label for="">Upload an image </label>
+            
+            
 
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary">Detect</button>
+            {% if language %}
+              
+            {% endif %}
+
           </div>
         </form>
       </div>
